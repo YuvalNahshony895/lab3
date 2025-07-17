@@ -15,6 +15,18 @@
         "type": "Milkshake-type ice cream",
         "ingredients": ["Peach Syrup", "Mango Chunks", "Vanilla Base"],
         "image": "https://yuvalnahshony895.github.io/lab3/images/peach-mango.svg"
+    }, {
+        "name": "Lemon Cake",
+        "calories": 300,
+        "type": "Milkshake-type ice cream",
+        "ingredients": ["Lemon Syrup", "Blueberry Chunks", "Strawberry Chunks", "Lemon Chunks", "Vanilla Base"],
+        "image": "https://yuvalnahshony895.github.io/lab3/images/ice-cream-xtra1.svg"
+    }, {
+        "name": "Cookies n Cream",
+        "calories": 290,
+        "type": "Ice cream",
+        "ingredients": ["Cookie Chunks", "Vanilla Base"],
+        "image": "https://yuvalnahshony895.github.io/lab3/images/ice-cream-xtra2.svg"
     }]
     
 }
