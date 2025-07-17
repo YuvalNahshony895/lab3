@@ -57,11 +57,11 @@ function showTopFlavors(jsonBody) {
         image.setAttribute("src", topFlavors[i].image);
         if (topFlavors[i].type == "Ice cream"){
                 
-                typeItem.textContent ="One serving is: " +  topFlavors[i].calories + "\n" + "Total Calories in box: " + topFlavors[i].calories * 6;
+                typeItem.textContent ="One serving is: " +  topFlavors[i].calories + "\n" + "Calories in box: " + topFlavors[i].calories * 6;
 
             }
         else if (topFlavors[i].type == "Milkshake-type ice cream"){
-            typeItem.textContent = "One serving is: " +  topFlavors[i].calories + "\n" + "Total Calories in box: " + topFlavors[i].calories * 8;
+            typeItem.textContent = "One serving is: " +  topFlavors[i].calories + "\n" + "Calories in box: " + topFlavors[i].calories * 8;
         }
         // STEP 10g: Build a loop for the ingredients array in the JSON
         // add the ingredient to the UL
