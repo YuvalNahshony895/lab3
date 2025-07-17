@@ -38,6 +38,7 @@ function populateHeader(jsonBody) {
 function showTopFlavors(jsonBody) {
     // STEP 10c: Attach the JSON topFlavors object to a variable
     let topFlavors = jsonBody.topFlavors;
+    let iceCreamType = 0;
     // STEP 10d: Loop through the topFlavors object
     for (i = 0; i < topFlavors.length; i++){
         // STEP 10e: build HTML elements for the content: article, h2, image, p1, p2, list
@@ -47,27 +48,40 @@ function showTopFlavors(jsonBody) {
         let p1 = document.createElement("p");
         let p2 = document.createElement("p");
         let list = document.createElement("ul");
-    
+        let typeItem = document.createElement("p");
   
         // STEP 10f: Set the textContent property for each of the above elements (except the UL), based on the JSON content
         h2.textContent = topFlavors[i].name;
         p1.textContent = "Calories: " + topFlavors[i].calories;
         p2.textContent = "Type: " + topFlavors[i].type;
         image.setAttribute("src", topFlavors[i].image);
+        if (topFlavors[i].type == "Ice cream"){
+                
+                typeItem.textContent ="One serving is: " +  topFlavors[i].calories + "\n" + "Total Calories in box: " + topFlavors[i].calories * 6;
+
+            }
+        else if (topFlavors[i].type == "Milkshake-type ice cream"){
+            typeItem.textContent = "One serving is: " +  topFlavors[i].calories + "\n" + "Total Calories in box: " + topFlavors[i].calories * 8;
+        }
         // STEP 10g: Build a loop for the ingredients array in the JSON
         // add the ingredient to the UL
         let ingredients = topFlavors[i].ingredients;
         for (let j = 0; j < ingredients.length; j++) {
             let listItem = document.createElement("li");
+            
             listItem.textContent = ingredients[j];
             list.appendChild(listItem);
+            
+        
         }
+         
         // STEP 10h: Append each of the above HTML elements to the ARTICLE element
         article.appendChild(h2);
         article.appendChild(p1);
         article.appendChild(p2);
         article.appendChild(image);
         article.appendChild(list);
+        article.appendChild(typeItem)
         // STEP 10i: Append each complete ARTICLE element to the SECTION element
         section.appendChild(article);
     }
